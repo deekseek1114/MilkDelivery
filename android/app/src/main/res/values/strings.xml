@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Milk Delivery</string>
+    <string name="title_activity_main">Milk Delivery</string>
+    <string name="package_name">com.milkdelivery.app</string>
+    <string name="custom_url_scheme">com.milkdelivery.app</string>
+</resources>

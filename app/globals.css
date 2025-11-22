@@ -20,7 +20,77 @@
 }
 
 body {
+  color: #1a1a1a !important;
+  /* Almost black for body text */
   background: var(--background);
-  color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Fix for input text color in dark mode on white backgrounds */
+input,
+textarea,
+select {
+  color: #000000 !important;
+  /* Force black text in inputs */
+  background-color: #ffffff !important;
+}
+
+/* Darken all text elements */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #000000 !important;
+  /* Pure black for headers */
+  font-weight: 700 !important;
+}
+
+label {
+  color: #1a1a1a !important;
+  /* Almost black for labels */
+  font-weight: 500 !important;
+}
+
+/* Table headers */
+th {
+  color: #000000 !important;
+  /* Pure black for table headers */
+  font-weight: 700 !important;
+}
+
+/* Table cells and content */
+td {
+  color: #1a1a1a !important;
+  /* Almost black for table data */
+}
+
+/* All gray text variations - make them dark */
+.text-gray-500,
+.text-gray-600,
+.text-gray-700,
+.text-gray-800,
+.text-gray-900 {
+  color: #2d2d2d !important;
+  /* Very dark gray */
+}
+
+/* Paragraph and span text */
+p,
+span,
+div {
+  color: #1a1a1a !important;
+  /* Almost black */
+}
+
+/* Links - keep them visible but dark */
+a {
+  color: #1e40af !important;
+  /* Dark blue for links */
+}
+
+/* Button text */
+button {
+  font-weight: 600 !important;
 }
