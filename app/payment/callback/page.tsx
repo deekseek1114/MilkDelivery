@@ -1,10 +1,10 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 
-export default function PaymentCallbackPage() {
+function PaymentCallbackContent() {
     const searchParams = useSearchParams();
     const [status, setStatus] = useState<"loading" | "success" | "failed">("loading");
     const [message, setMessage] = useState("");
@@ -186,5 +186,20 @@ export default function PaymentCallbackPage() {
                 )}
             </div>
         </div>
+    );
+}
+
+export default function PaymentCallbackPage() {
+    return (
+        <Suspense fallback={
+            <div className="min-h-screen flex items-center justify-center bg-gray-50">
+                <div className="text-center">
+                    <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-blue-600 mx-auto mb-4"></div>
+                    <p className="text-gray-600">Loading payment details...</p>
+                </div>
+            </div>
+        }>
+            <PaymentCallbackContent />
+        </Suspense>
     );
 }
